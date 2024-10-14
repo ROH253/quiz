@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Team Quiz</h1>
+
+        <!-- Team Name Input -->
+        <div id="team-section">
+            <label for="teamName">Enter your team name:</label>
+            <input type="text" id="teamName" placeholder="Team name" required>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" style="display:none;">
+            <div id="question-container"></div>
+            <button onclick="submitAnswer()">Submit Answer</button>
+        </div>
+
+        <!-- Score Section -->
+        <div id="score-section" style="display:none;">
+            <h2>Quiz Completed!</h2>
+            <p id="final-score"></p>
+            <button onclick="retrieveData()">Retrieve Team Data</button>
+        </div>
+
+        <!-- Retrieve Team Data Section -->
+        <div id="retrieve-section">
+            <label for="retrieveTeam">Retrieve data for team:</label>
+            <input type="text" id="retrieveTeam" placeholder="Team name">
+            <button onclick="retrieveTeamData()">Retrieve</button>
+        </div>
+
+        <div id="team-data"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
